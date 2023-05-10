@@ -1,11 +1,15 @@
 
 import './App.css';
+import Gifs from './components/gifs/Gifs';
+import Header from './components/header/Header';
+import Search from './components/search/Search';
 
 function App() {
   return (
     <div className="App">
-      <h1> SP3</h1>
-      
+      <Header/>
+      <Search/>
+      <Gifs/>
     </div>
   );
 }
