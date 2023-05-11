@@ -4,7 +4,7 @@ function Search() {
   return (
     <div>
       <h1 className={styles.text}>¡Inspirate y busca los mejores GIFS!</h1>
-      <img src="./img/principal.jpg" alt="Search" className={styles.img} />
+      <img src="./img/principal.png" alt="Search" className={styles.img} />
       <div className={styles.search}>
         <input type="text" value="Busca gifs" className={styles.input} />
         <div className={styles.imgSearch}>

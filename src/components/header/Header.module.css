@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+
+}
+
+.header img{
+    width: 60px;
+}
+
+.header button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border-color: mediumpurple;
+    color: mediumpurple;
+}
