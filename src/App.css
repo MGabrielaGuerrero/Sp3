@@ -9,9 +9,16 @@
   font-family: sans-serif;
   Font: Roboto;
   text-align: center;
-  height: 1697px;
-  width: 900px;
-  margin-left: 10%;
   margin-top: 1%;
   border-radius: 0px;
+ 
+  transition: background-color 0.5s ease;
+}
+
+.App.light{
+  background-color: white;
+}
+
+.App.dark{
+  background-color: #373737;
 }
