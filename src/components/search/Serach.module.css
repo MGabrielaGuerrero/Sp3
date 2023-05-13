@@ -1,4 +1,4 @@
-.contenedor{
+.contenedor {
     display: block;
     align-items: center;
 }
@@ -46,7 +46,7 @@
     color: #3F3F3F;
     margin: 0px 11px;
     border-radius: 61px;
-    outline:none;
+    outline: none;
 }
 
 .imgSearch {
@@ -61,6 +61,7 @@
     height: 20px;
     width: 20px;
     margin: 20%;
+    cursor: pointer;
 }
 
 
@@ -78,7 +79,7 @@
     color: white;
 }
 
-.searchdark{
+.searchdark {
     width: 40%;
     height: 55px;
     margin-left: 30%;
@@ -88,7 +89,7 @@
     justify-content: center;
 }
 
-.searchdark input{
+.searchdark input {
     width: 86%;
     height: 90%;
     font-family: 'Roboto';
@@ -100,7 +101,7 @@
     color: white;
     margin: 0px 11px;
     border-radius: 61px;
-    outline:none;
+    outline: none;
     background-color: #373737
 }
 

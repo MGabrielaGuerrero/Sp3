@@ -5,21 +5,29 @@ import { AppContext } from "../../context/dataGifos";
 import { DarkModeContext } from "../../context/darkMode";
 
 function Search() {
-
   const [textSearch, setTextSearch] = useState("buscar Gifs");
+  const [search, setSearch] = useState(true);
   const { setData } = useContext(AppContext);
   const { dark } = useContext(DarkModeContext);
-  
+
   useEffect(() => {
-    const response = getGifs(textSearch);
-    setData(response);
-  }, [textSearch, setData]);
+    if (search) {
+      getGifs(textSearch)
+        .then((data) => {
+          setData(data);
+          setSearch(false);
+        })
+        .catch((e) => console.log(e));
+    }
+  }, [textSearch, setData, search]);
 
   return (
     <div className={styles.contenedor}>
-      <h1 className={`${dark ? styles.textdark : styles.text}`}>¡Inspirate y busca los mejores GIFS!</h1>
+      <h1 className={`${dark ? styles.textdark : styles.text}`}>
+        ¡Inspirate y busca los mejores GIFS!
+      </h1>
       <img src="./img/principal.png" alt="Search" className={styles.img} />
-      <div className={`${dark ? styles.searchdark :styles.search}`}>
+      <div className={`${dark ? styles.searchdark : styles.search}`}>
         <input
           type="text"
           value={textSearch}
@@ -28,7 +36,7 @@ function Search() {
           className={styles.input}
         />
         <div className={`${dark ? styles.imgSearchdark : styles.imgSearch}`}>
-          <img src="./img/search.png" alt="" />
+          <img src="./img/search.png" alt="" onClick={(e) => setSearch(true)} />
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import React from "react";
 
-function CardGif() {
+function CardGif({dataGif}) {
   return (
     <div>
-      <h1>CardGif</h1>
+      {console.log(dataGif.images.fixed_height.url)}
+      <img src={dataGif.images.fixed_height.url} alt="" />
     </div>
   );
 }
