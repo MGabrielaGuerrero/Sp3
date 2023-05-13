@@ -9,9 +9,12 @@ function Header() {
     setDark(!dark)
   }
 
+  const redirec = () =>{
+    window.location.href = "https://giphy.com"
+  }
   return (
     <div className={`${dark ? styles.headerdark : styles.header}`}>
-      <img 
+      <img onClick={redirec}
       src="./img/logo.png" 
       alt="Imagen logo" />
       <button onClick={activeDarkMode}>{dark ? "LIGHT MODE" : "DARK MODE"}</button>
